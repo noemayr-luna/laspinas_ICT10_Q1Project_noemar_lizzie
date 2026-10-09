@@ -1,321 +1,203 @@
+
 * {
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     min-height: 100vh;
-
     font-family: Arial, Helvetica, sans-serif;
-
-    background: linear-gradient(
-        135deg,
-        #f6efff,
-        #fff8d9
-    );
-
+    background: linear-gradient(135deg, #f6efff, #fff8d9);
     color: #29203d;
 }
-
 
 nav {
     display: flex;
     justify-content: center;
     gap: 10px;
-
     padding: 18px;
-
-    background: #fd55a3;
-
-    box-shadow:
-        0 3px 12px
-        rgba(0, 0, 0, 0.12);
+    background: #6d3db8;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
-
 
 nav a {
     color: white;
-
     text-decoration: none;
-
-    font-weight: 700;
-
+    font-weight: bold;
     padding: 10px 16px;
-
     border-radius: 999px;
 }
 
-
 nav a:hover,
 nav a.active {
-
     background: #ffd84d;
-
-    color: #f43a94;
+    color: #3d255f;
 }
 
-
 .container {
-
     width: min(850px, 92%);
-
     margin: 40px auto;
 }
 
-
 .hero {
-
     text-align: center;
-
     margin-bottom: 28px;
 }
 
-
 .eyebrow {
-
     margin-bottom: 8px;
-
     color: #d04491;
-
     font-weight: 800;
-
     letter-spacing: 2px;
 }
 
-
 h1 {
-
     margin: 0 0 10px;
-
-    color: #ff57ab;
-
-    font-size:
-        clamp(2rem, 5vw, 3.2rem);
+    color: #552c8c;
+    font-size: clamp(2rem, 5vw, 3.2rem);
 }
-
 
 h2 {
-
     margin-top: 0;
-
-    color: #e451a4;
+    color: #552c8c;
 }
-
 
 .card {
-
-    background:
-        rgba(255, 255, 255, 0.94);
-
+    background: rgba(255, 255, 255, 0.94);
     border-radius: 20px;
-
     padding: 26px;
-
     margin-bottom: 22px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(72, 42, 111, 0.12);
+    box-shadow: 0 8px 25px rgba(72, 42, 111, 0.12);
 }
 
-
 .product {
-
     display: grid;
-
-    grid-template-columns:
-        30px 1fr auto;
-
+    grid-template-columns: 30px 1fr auto;
     align-items: center;
-
     gap: 10px;
-
     padding: 15px;
-
     margin: 10px 0;
-
     border: 2px solid #eee4ff;
-
     border-radius: 13px;
-
     cursor: pointer;
 }
 
-
 .product:hover {
-
-    border-color: #ffb0d5;
-
+    border-color: #d4b9ff;
     background: #fbf8ff;
 }
 
-
 .product input {
-
     width: 18px;
-
     height: 18px;
-
-    accent-color: #fc80c0;
+    accent-color: #6d3db8;
 }
-
 
 .product strong {
-
-    color: #ff7fc3;
+    color: #c23480;
 }
-
 
 label:not(.product) {
-
     display: block;
-
     margin: 14px 0 7px;
-
-    font-weight: 700;
+    font-weight: bold;
 }
-
 
 input[type="text"],
 input[type="number"],
 select {
-
     width: 100%;
-
     padding: 13px 14px;
-
     border: 2px solid #ded0f5;
-
     border-radius: 10px;
-
     font-size: 1rem;
-
     background: white;
 }
 
-
 input:focus,
 select:focus {
-
     outline: 3px solid #ffe88b;
-
-    border-color: #d15b9a;
+    border-color: #8c5bd1;
 }
 
-
 button {
-
     width: 100%;
-
     margin-top: 20px;
-
     padding: 14px 20px;
-
     border: none;
-
     border-radius: 12px;
-
     background: #ffd84d;
-
-    color: #d3599c;
-
+    color: #3d255f;
     font-size: 1rem;
-
     font-weight: 800;
-
     cursor: pointer;
 }
 
-
 button:hover {
-
     background: #f6c72e;
-
     transform: translateY(-1px);
 }
 
-
 .output {
-
     padding: 18px;
-
     border-radius: 13px;
-
     background: #f8f3ff;
-
     border: 2px dashed #c9acee;
-
     min-height: 70px;
 }
 
-
 .receipt-card h3 {
-
     text-align: center;
-
     margin-top: 0;
-
-    color: #cd4c8f;
+    color: #552c8c;
 }
 
+.receipt-card ul {
+    padding-left: 22px;
+}
 
 .receipt-card p {
-
     display: flex;
-
     justify-content: space-between;
-
     gap: 20px;
 }
 
-
 .receipt-card hr {
-
     border: 0;
-
-    border-top:
-        2px solid #dfd2ee;
+    border-top: 2px solid #dfd2ee;
 }
 
-
 .receipt-card .total {
-
     font-size: 1.2rem;
-
     font-weight: 800;
-
     color: #c23480;
 }
 
-
 .error {
-
     color: #b42318;
-
-    font-weight: 700;
+    font-weight: bold;
 }
 
+.hint {
+    color: #665779;
+    font-size: 0.9rem;
+}
 
 @media (max-width: 600px) {
-
     nav {
-
         flex-direction: column;
-
         align-items: stretch;
-
         text-align: center;
     }
 
-
     .container {
-
         margin-top: 25px;
     }
 
-
     .card {
+        padding: 20px;
+    }
+}
 
         padding: 20px;
     }
