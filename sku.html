@@ -1,12 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Entrep Fair - SKU Generator</title>
 
@@ -16,81 +14,37 @@
           href="https://pyscript.net/releases/2024.1.1/core.css">
 
     <script type="module"
-            src="https://pyscript.net/releases/2024.1.1/core.js">
-    </script>
-
+            src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 </head>
-
 
 <body>
 
     <nav>
-
-        <a href="index.html">
-            Receipt Generator
-        </a>
-
-        <a href="sku.html" class="active">
-            SKU Generator
-        </a>
-
+        <a href="index.html">Receipt Generator</a>
+        <a href="sku.html" class="active">SKU Generator</a>
     </nav>
-
 
     <main class="container">
 
-        <section class="hero">
-
-            <p class="eyebrow">
-                ENTREP FAIR
-            </p>
-
-            <h1>
-                SKU Generator
-            </h1>
-
-            <p>
-                Generate a simple SKU using the
-                product category, name, and quantity.
-            </p>
-
-        </section>
-
+        <header class="hero">
+            <p class="eyebrow">ENTREP FAIR</p>
+            <h1>SKU Generator</h1>
+            <p>Create a unique code from the product category, name, and quantity.</p>
+        </header>
 
         <section class="card">
 
-            <label for="category">
-                Category
-            </label>
+            <label for="category">Product Category</label>
 
             <select id="category">
-
-                <option value="">
-                    -- Select Category --
-                </option>
-
-                <option value="Beverages">
-                    Beverages
-                </option>
-
-                <option value="Snacks">
-                    Snacks
-                </option>
-
-                <option value="Clothing">
-                    Clothing
-                </option>
-
-                <option value="Accessories">
-                    Accessories
-                </option>
-
+                <option value="">-- Select Category --</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Accessories">Accessories</option>
             </select>
 
-
-            <label for="product_name">
-                Product Name
-            </label>
+            <label for="product_name">Product Name</label>
 
             <input
                 type="text"
@@ -98,57 +52,41 @@
                 placeholder="e.g. Americano"
             >
 
-
-            <label for="quantity">
-                Quantity
-            </label>
+            <label for="quantity">Stock Quantity (0-999)</label>
 
             <input
                 type="number"
                 id="quantity"
                 min="0"
+                max="999"
                 step="1"
                 placeholder="e.g. 10"
             >
 
-
-            <button
-                type="button"
-                py-click="SKU_generator">
-
+            <button type="button" py-click="SKU_generator">
                 Generate SKU
-
             </button>
 
         </section>
 
-
         <section class="card">
 
-            <h2>
-                Generated SKU
-            </h2>
+            <h2>Generated SKU</h2>
 
-            <div
-                id="sku_output"
-                class="output">
-
-                <p>
-                    Your SKU will appear here.
-                </p>
-
+            <div id="sku_output" class="output">
+                <p>Your SKU will appear here.</p>
             </div>
+
+            <p class="hint">
+                Format: 2 category characters + 3 product characters
+                + 3 quantity digits.
+            </p>
 
         </section>
 
     </main>
 
-
-    <script
-        type="py"
-        src="main.py">
-    </script>
+    <script type="py" src="./main.py"></script>
 
 </body>
-
 </html>
